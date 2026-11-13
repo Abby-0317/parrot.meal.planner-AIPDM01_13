@@ -1,0 +1,155 @@
+{
+  "species_profiles": [
+    {
+      "species_id": "cockatiel",
+      "name_zh": "玄鳳鸚鵡",
+      "aliases": [
+        "玄鳳",
+        "雞尾鸚鵡"
+      ],
+      "diet_group": "group_grass_parakeet",
+      "avg_weight_g": 95,
+      "daily_intake_ratio": 0.12,
+      "macro_ratios": {
+        "pellets": 0.5,
+        "veggies": 0.3,
+        "fruits": 0.05,
+        "grains_seeds": 0.15
+      },
+      "banned_categories": [
+        "cat_fruit_high_sugar",
+        "cat_high_fat_nuts"
+      ],
+      "priority_categories": [
+        "cat_veg_leafy_ca",
+        "cat_veg_vitA"
+      ],
+      "unit_scale_hint": "1 小塊約 1 公分立方（約 3–5g）"
+    },
+    {
+      "species_id": "budgerigar",
+      "name_zh": "虎皮鸚鵡",
+      "aliases": [
+        "虎皮"
+      ],
+      "diet_group": "group_grass_parakeet",
+      "avg_weight_g": 35,
+      "daily_intake_ratio": 0.14,
+      "macro_ratios": {
+        "pellets": 0.5,
+        "veggies": 0.3,
+        "fruits": 0.05,
+        "grains_seeds": 0.15
+      },
+      "banned_categories": [
+        "cat_fruit_high_sugar",
+        "cat_high_fat_nuts"
+      ],
+      "priority_categories": [
+        "cat_veg_leafy_ca",
+        "cat_veg_low_cal"
+      ],
+      "unit_scale_hint": "1 小塊約 0.5 公分切丁（約 2g）"
+    },
+    {
+      "species_id": "lovebird",
+      "name_zh": "愛情鳥",
+      "aliases": [
+        "愛情鳥",
+        "小鸚"
+      ],
+      "diet_group": "group_small_forager",
+      "avg_weight_g": 52,
+      "daily_intake_ratio": 0.13,
+      "macro_ratios": {
+        "pellets": 0.55,
+        "veggies": 0.25,
+        "fruits": 0.1,
+        "grains_seeds": 0.1
+      },
+      "banned_categories": [
+        "cat_high_fat_nuts"
+      ],
+      "priority_categories": [
+        "cat_veg_vitA",
+        "cat_veg_leafy_ca"
+      ],
+      "unit_scale_hint": "1 小塊約 0.8 公分切丁（約 3g）",
+      "data_note": "原附件 lovebird 設定；與牡丹拆分僅供管理分類，未有可支持兩者不同營養需求的附件數據。"
+    },
+ {
+      "species_id": "peony_lovebird",
+      "name_zh": "牡丹",
+      "aliases": [
+        "牡丹鸚鵡"
+      ],
+      "diet_group": "group_small_forager",
+      "avg_weight_g": 52,
+      "daily_intake_ratio": 0.13,
+      "macro_ratios": {
+        "pellets": 0.55,
+        "veggies": 0.25,
+        "fruits": 0.1,
+        "grains_seeds": 0.1
+      },
+      "banned_categories": [
+        "cat_high_fat_nuts"
+      ],
+      "priority_categories": [
+        "cat_veg_vitA",
+        "cat_veg_leafy_ca"
+      ],
+      "unit_scale_hint": "1 小塊約 0.8 公分切丁（約 3g）",
+      "data_note": "營養與食材限制暫沿用原 lovebird 共用設定；原附件未提供牡丹獨立數值，待確認。牡丹與愛情鳥通常是同一類群的稱呼，此處僅依管理需求分為兩筆紀錄。"
+    },
+    {
+      "species_id": "parrotlet",
+      "name_zh": "太平洋鸚鵡",
+      "aliases": [
+        "太平洋"
+      ],
+      "diet_group": "group_small_forager",
+      "avg_weight_g": 30,
+      "daily_intake_ratio": 0.15,
+      "macro_ratios": {
+        "pellets": 0.55,
+        "veggies": 0.25,
+        "fruits": 0.1,
+        "grains_seeds": 0.1
+      },
+      "banned_categories": [
+        "cat_high_fat_nuts"
+      ],
+      "priority_categories": [
+        "cat_veg_vitA",
+        "cat_grain_protein"
+      ],
+      "unit_scale_hint": "1 小塊約 0.5 公分切丁（約 2g）"
+    },
+  {
+      "species_id": "caique",
+      "name_zh": "凱克鸚鵡",
+      "aliases": [
+        "凱克",
+        "黑頭凱克",
+        "金頭凱克"
+      ],
+      "diet_group": "group_neotropical_fruit",
+      "avg_weight_g": 160,
+      "daily_intake_ratio": 0.12,
+      "macro_ratios": {
+        "pellets": 0.5,
+        "veggies": 0.25,
+        "fruits": 0.15,
+        "grains_seeds": 0.1
+      },
+      "banned_categories": [],
+      "priority_categories": [
+        "cat_fruit_low_gi",
+        "cat_veg_vitA",
+        "cat_grain_protein"
+      ],
+      "unit_scale_hint": "1 片／1 小塊約 1 元硬幣大小（約 6–8g）"
+    }
+  ]
+}

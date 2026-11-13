@@ -1,0 +1,41 @@
+- main "今天也照顧好鳥寶" [ref=f12e3]:
+  - generic [ref=f12e4]:
+    - generic [ref=f12e5]: 鸚鵡日常
+    - generic "目前頁面" [ref=f12e6]: 首頁
+  - generic [ref=f12e7]:
+    - generic [ref=f12e8]:
+      - paragraph [ref=f12e9]: 好好吃飯，好好生活
+      - heading "今天也照顧好鳥寶" [level=1] [ref=f12e10]
+    - button "新增鳥寶" [ref=f12e11] [cursor=pointer]
+  - region "鳥寶列表" [ref=f12e12]:
+    - article [ref=f12e13]:
+      - generic [ref=f12e15]:
+        - paragraph [ref=f12e16]: 玄鳳鸚鵡
+        - heading "小羽" [level=2] [ref=f12e17]
+      - generic [ref=f12e18]:
+        - generic [ref=f12e19]:
+          - text: 體重
+          - strong [ref=f12e20]: 85.5 克
+        - text: 草食型鸚鵡
+    - article [ref=f12e21]:
+      - generic [ref=f12e23]:
+        - paragraph [ref=f12e24]: 虎皮鸚鵡
+        - heading "小米" [level=2] [ref=f12e25]
+      - generic [ref=f12e26]:
+        - generic [ref=f12e27]:
+          - text: 體重
+          - strong [ref=f12e28]: 30.2 克
+        - text: 草食型鸚鵡
+  - region "鳥寶居家小氣候" [ref=f12e29]:
+    - paragraph [ref=f12e30]: 今日環境
+    - heading "鳥寶居家小氣候" [level=2] [ref=f12e31]
+    - generic [ref=f12e32]:
+      - generic [ref=f12e33]:
+        - generic [ref=f12e34]: 氣溫
+        - strong [ref=f12e35]: 24°C
+      - generic [ref=f12e36]:
+        - generic [ref=f12e37]: 濕度
+        - strong [ref=f12e38]: 62%
+    - paragraph [ref=f12e39]: 環境數值在日常參考範圍內
+    - paragraph [ref=f12e40]: 資料更新：今天 09:00 · 本地參考資料
+  - generic [ref=f12e41]: 僅供健康日常鮮食參考，病鳥請遵照獸醫指示

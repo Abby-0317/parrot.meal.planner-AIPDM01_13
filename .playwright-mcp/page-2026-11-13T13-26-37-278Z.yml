@@ -1,0 +1,25 @@
+- main "先從鳥寶開始" [ref=f2e3]:
+  - generic [ref=f2e4]:
+    - generic [ref=f2e5]: 鸚鵡日常
+    - generic "目前頁面" [ref=f2e6]: 首頁
+  - generic [ref=f2e7]:
+    - paragraph [ref=f2e8]: 好好吃飯，好好生活
+    - heading "先從鳥寶開始" [level=1] [ref=f2e9]
+  - region "先建立鳥寶，才能產生專屬飲食建議" [ref=f2e10]:
+    - generic [aria-hidden] [ref=f2e11]: 🦜
+    - heading "先建立鳥寶，才能產生專屬飲食建議" [level=2] [ref=f2e12]
+    - paragraph [ref=f2e13]: 填寫基本資料後，我們會把每日照顧資訊整理在這裡。
+    - button "建立第一隻鳥寶" [ref=f2e14] [cursor=pointer]
+  - region "鳥寶居家小氣候" [ref=f2e15]:
+    - paragraph [ref=f2e16]: 今日環境
+    - heading "鳥寶居家小氣候" [level=2] [ref=f2e17]
+    - generic [ref=f2e18]:
+      - generic [ref=f2e19]:
+        - generic [ref=f2e20]: 氣溫
+        - strong [ref=f2e21]: 24°C
+      - generic [ref=f2e22]:
+        - generic [ref=f2e23]: 濕度
+        - strong [ref=f2e24]: 62%
+    - paragraph [ref=f2e25]: 環境數值在日常參考範圍內
+    - paragraph [ref=f2e26]: 資料更新：今天 09:00 · 本地參考資料
+  - generic [ref=f2e27]: 僅供健康日常鮮食參考，病鳥請遵照獸醫指示

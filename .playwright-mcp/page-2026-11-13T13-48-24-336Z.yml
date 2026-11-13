@@ -1,0 +1,32 @@
+- main "今天也照顧好鳥寶" [ref=f14e3]:
+  - generic [ref=f14e4]:
+    - generic [ref=f14e5]: 鸚鵡日常
+    - generic "目前頁面" [ref=f14e6]: 首頁
+  - generic [ref=f14e7]:
+    - generic [ref=f14e8]:
+      - paragraph [ref=f14e9]: 好好吃飯，好好生活
+      - heading "今天也照顧好鳥寶" [level=1] [ref=f14e10]
+    - button "新增鳥寶" [ref=f14e11] [cursor=pointer]
+  - region "鳥寶列表" [ref=f14e12]:
+    - article [ref=f14e13]:
+      - generic [ref=f14e15]:
+        - paragraph [ref=f14e16]: 玄鳳鸚鵡
+        - heading "焦點測試" [level=2] [ref=f14e17]
+      - generic [ref=f14e18]:
+        - generic [ref=f14e19]:
+          - text: 體重
+          - strong [ref=f14e20]: 85.5 克
+        - text: 草食型鸚鵡
+  - region "鳥寶居家小氣候" [ref=f14e21]:
+    - paragraph [ref=f14e22]: 今日環境
+    - heading "鳥寶居家小氣候" [level=2] [ref=f14e23]
+    - generic [ref=f14e24]:
+      - generic [ref=f14e25]:
+        - generic [ref=f14e26]: 氣溫
+        - strong [ref=f14e27]: 24°C
+      - generic [ref=f14e28]:
+        - generic [ref=f14e29]: 濕度
+        - strong [ref=f14e30]: 62%
+    - paragraph [ref=f14e31]: 環境數值在日常參考範圍內
+    - paragraph [ref=f14e32]: 資料更新：今天 09:00 · 本地參考資料
+  - generic [ref=f14e33]: 僅供健康日常鮮食參考，病鳥請遵照獸醫指示

@@ -1,0 +1,52 @@
+[mcp_servers.playwright-y]
+command = "npx"
+args = ["@playwright/mcp@latest"]
+
+[mcp_servers.playwright-y.tools.browser_run_code_unsafe]
+approval_mode = "approve"
+
+[mcp_servers.playwright-y.tools.browser_navigate]
+approval_mode = "approve"
+
+[mcp_servers.playwright-y.tools.browser_tabs]
+approval_mode = "approve"
+
+[mcp_servers.playwright-y.tools.browser_resize]
+approval_mode = "approve"
+
+[features]
+multi_agent = true
+
+[agents]
+# 允許同時運行的最大 Sub-agent 執行緒數（建議設為 2~4，視專案規模而定）
+max_threads = 4
+# 防止無限循環嵌套的最大深度
+max_depth = 1
+
+[agents.spec-planner]
+description = "負責將產品 PRD 轉換為 OpenSpec 提案、需求規格與任務清單的產品架構師。"
+config_file = "agnets/spec-planner.toml"
+sandbox_mode = "workspace-write"
+
+[agents.ui-ux-designer]
+description = "負責設計介面流程、視覺排版、Design System 與元件規格的 UI/UX 設計師。"
+config_file = "agnets/ui-ux-designer.toml"
+sandbox_mode = "workspace-write"
+
+[agents.builder]
+description = "負責根據規格與任務清單編寫、修改與實現應用程式程式碼的開發工程師。"
+config_file = "agnets/builder.toml"
+sandbox_mode = "workspace-write"
+
+[agents.qa-inspector]
+description = "負責執行程式碼審查、驗證任務清單並進行品質檢測的測試與品管工程師。"
+config_file = "agnets/qa-inspector.toml"
+sandbox_mode = "workspace-read"
+
+
+[mcp_servers.stitch]
+url = "https://stitch.googleapis.com/mcp"
+
+[mcp_servers.stitch.http_headers]
+
+

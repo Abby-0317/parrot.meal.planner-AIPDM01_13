@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#F4F1EA",
+        surface: "#F4F1EA",
+        "surface-container-lowest": "#FFFFFF",
+        "surface-container-low": "#FAF8F4",
+        "surface-container": "#EFECE4",
+        "surface-container-high": "#E7E3DA",
+        "surface-container-highest": "#DED9CE",
+        "on-surface": "#232621",
+        "on-surface-variant": "#62675E",
+        primary: "#384D35",
+        "primary-dark": "#2B3C29",
+        "primary-container": "#4A6346",
+        "on-primary": "#FFFFFF",
+        "on-primary-container": "#E1EEDF",
+        secondary: "#8C7B62",
+        "secondary-container": "#EAE5DA",
+        "on-secondary-container": "#3F372A",
+        "primary-fixed": "#D7E7D4",
+        "on-primary-fixed": "#162314",
+        outline: "#D7D2C7",
+        "outline-variant": "#E3DFD5"
+      },
+      borderRadius: {
+        "DEFAULT": "0.75rem",
+        "lg": "1rem",
+        "xl": "1.5rem",
+        "2xl": "1.75rem",
+        "3xl": "2.25rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-md": "1rem",
+        "gutter": "1rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "1.25rem"
+      },
+      fontFamily: {
+        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+        "headline-lg": ["Newsreader", "serif"],
+        "display": ["Plus Jakarta Sans", "sans-serif"],
+        "card-title": ["Plus Jakarta Sans", "sans-serif"],
+        "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+        "headline-md": ["Plus Jakarta Sans", "sans-serif"]
+      }
+    }
+  }
+};</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-[#F4F1EA] font-body-md text-body-md text-[#232621] flex flex-col antialiased selection:bg-[#D7E7D4] selection:text-[#162314]"><header class="fixed top-0 w-full z-50 bg-[#F4F1EA]/90 backdrop-blur-xl border-b border-[#E3DFD5]/80 pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-white border border-[#E3DFD5] flex items-center justify-center p-1.5 shadow-sm"><img alt="FeatherCare App Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLuqKMouxmLe-VSz5gQZUwxmgh_Rpb8oL68Xx8Yy0usHstlrx0NEEKg05aWpktYgH7mc7nTgyAf366DQNNJBAfy_9amWdDz9GO3fkoH5JKhLcOMU7sC8SQlprRcXaevnKWL_qEOhMdN2wt9RAhNOa89I4SdpB39szsSCXItG6io80W7QsWKXiIjHpSZo4hDp89bKOCQXOf_1G3F00lM9SM_ghkqR5i1jZ2ni65lt0"/></div><div class="flex flex-col"><span class="font-label-md text-label-md text-[#232621] font-bold leading-none">FeatherCare</span><span class="font-label-sm text-label-sm text-[#4E624A] leading-tight font-semibold tracking-tight">鳥寶日記</span></div></div><div class="flex items-center gap-2"><button aria-label="選單清單" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/70 border border-[#E3DFD5] text-[#232621] hover:bg-white active:scale-95 transition-all shadow-sm"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button aria-label="個人設定" class="w-10 h-10 flex items-center justify-center rounded-full p-0.5 border border-[#E3DFD5] hover:ring-2 hover:ring-[#384D35]/30 transition-all bg-white shadow-sm"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYaamI--VS9pGcHqIB8DPIm23nimJHVkUYETjdlxKXAg2wc_jLRgZeyROqLg5BCKErqm_Kkaq4bmlaqaMUPPnRhglFQmdzaBwUJrImWJcIhUecpC70aS4-afCq3vW27vQv_Eix-fRla15vdIvmJTmTF5l4mTdoZTQ1_e38MFiShViGHlNl3dBK0nwjkDnzYs_LfDoN588I8T8bNp_xr3GsJ_1_GCpttAE5v5KSdOM"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 px-margin bg-[#F4F1EA] min-h-screen"><div class="flex flex-col w-full gap-5 pb-12">
+<!-- Profile Header Hero Card -->
+<section class="bg-white rounded-3xl p-5 border border-[#E3DFD5] shadow-[0_8px_30px_rgb(0,0,0,0.03)] flex flex-col gap-4 relative overflow-hidden">
+<!-- Subtle Organic Ambient Backing -->
+<div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-[#FAF8F4] pointer-events-none"></div>
+<!-- Top Row: Photo & Core Badges -->
+<div class="flex items-start gap-4 relative z-10">
+<div class="relative shrink-0">
+<div class="w-20 h-20 rounded-2xl overflow-hidden shadow-sm bg-[#FAF8F4] border border-[#E3DFD5] p-1 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-xl" data-alt="Charming close-up portrait of a Lutino Cockatiel parrot named Pobo with bright yellow crest, rosy orange cheek patches, and intelligent gentle eyes, perched naturally against a soft warm oat textured studio background, warm domestic lighting, photorealistic, premium editorial avian photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3C-aRC3spfOXfXoljQoIpx0Bi0XdpqGiupw6JVuF2M4dadEzJJfSBNDYVYfzHSnoHq1EbUNXiR-y3TvX_jWYQJKIQheGgy-rxLhMSFt8vAclWZnX9VMU1OFgzcTobZvmP9siOLJKyjyVpSTv7WZdE6-luvjijXrHaR-3KuZI11EdhxBuUCvVb6S3h1fzW5rzJnyyspCdA0yK-0pYrC8e0Xv5IXEpK34XE0ZuVMIE"/>
+</div>
+<span class="absolute -bottom-1 -right-1 w-6 h-6 bg-[#384D35] text-white rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[13px]">pets</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1 justify-center">
+<div class="flex items-center justify-between gap-1">
+<h1 class="font-headline-lg text-[25px] leading-tight text-[#232621] truncate font-medium">波波 (Pobo)</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-[#EAE5DA] text-[#3F372A] text-label-sm font-label-sm font-semibold shrink-0">公 · 2 歲 1 個月</span>
+</div>
+<p class="font-body-md text-[13px] text-[#62675E] flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-[16px] text-[#4E624A]">cruelty_free</span>
+          黃化玄鳳鸚鵡 (Cockatiel)
+        </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[11px] bg-[#FAF8F4] text-[#474C43] border border-[#E3DFD5] px-2.5 py-0.5 rounded-full font-medium">
+<span class="material-symbols-outlined text-[12px] text-[#8C7B62]">cake</span> 2022年4月18日
+          </span>
+</div>
+</div>
+</div>
+<!-- Avian Identification Tags (Pill Style from Reference) -->
+<div class="grid grid-cols-2 gap-2.5 pt-1 relative z-10">
+<div class="bg-[#FAF8F4] border border-[#E3DFD5] p-3 rounded-2xl flex flex-col justify-center">
+<span class="font-label-sm text-[11px] text-[#62675E] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#8C7B62]">sell</span> 封閉式腳環
+        </span>
+<span class="font-card-title text-[15px] text-[#232621] font-bold tracking-wider mt-1">TW-22-C8902</span>
+</div>
+<div class="bg-[#FAF8F4] border border-[#E3DFD5] p-3 rounded-2xl flex flex-col justify-center">
+<span class="font-label-sm text-[11px] text-[#62675E] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#8C7B62]">fingerprint</span> 植入晶片號碼
+        </span>
+<span class="font-card-title text-[15px] text-[#232621] font-bold tracking-wider mt-1">900115002498</span>
+</div>
+</div>
+<!-- Weight Telemetry & Mini Sparkline Module -->
+<div class="bg-[#FAF8F4] border border-[#E3DFD5] rounded-2xl p-4 flex flex-col gap-2 relative z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-label-md text-label-md text-[#62675E]">晨間空腹體重</span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-display text-[32px] text-[#232621] leading-none font-bold">92</span>
+<span class="font-label-md text-[13px] text-[#62675E] font-semibold">g</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-[#E5ECE3] text-[#2B3C29] font-label-sm text-[11px] font-bold flex items-center gap-1.5 border border-[#D0DFCE]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#384D35]"></span> 體態標準
+        </span>
+</div>
+<!-- Sparkline and Range Reference -->
+<div class="flex items-end justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-[#62675E]">品種健康區間</span>
+<span class="font-label-md text-[13px] text-[#232621] font-semibold">85 ~ 105 g</span>
+</div>
+<!-- Inline Micro Sparkline SVG in Olive Green -->
+<div class="flex flex-col items-end">
+<svg class="w-28 h-8 text-[#384D35]" fill="none" stroke="currentColor" viewbox="0 0 110 32">
+<path d="M4 22 L24 20 L44 24 L64 16 L84 15 L106 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<circle class="fill-[#E5ECE3] stroke-[#384D35]" cx="106" cy="14" r="3.5" stroke-width="2"></circle>
+</svg>
+<span class="font-label-sm text-[11px] text-[#62675E]">近 7 天穩定 (+0.4g)</span>
+</div>
+</div>
+</div>
+<!-- Trigger Modal Action Button: Pill Rounded Full Olive Button -->
+<button class="w-full h-12 bg-[#384D35] hover:bg-[#2B3C29] text-white font-card-title text-[15px] font-semibold rounded-full flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-md shadow-[#384D35]/20 relative z-10" id="open-edit-drawer-btn">
+<span class="material-symbols-outlined text-[19px]">edit_note</span>
+<span>編輯鳥寶資料</span>
+</button>
+</section>
+<!-- Care Alerts & Veterinary Reminders -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-card-title text-[16px] text-[#232621] font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-[#384D35]">notifications_active</span>
+        照護日常提醒
+      </h2>
+<span class="font-label-sm text-[11px] bg-[#EAE5DA] text-[#3F372A] px-2 py-0.5 rounded-full font-semibold">2 項待關注</span>
+</div>
+<!-- Alert Card 1: Vet Checkup -->
+<div class="bg-white rounded-2xl p-4 border border-[#E3DFD5] shadow-sm flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-2xl bg-[#EAE5DA] text-[#384D35] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-card-title text-[15px] text-[#232621] font-semibold">年度定期羽健檢</span>
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-[#E5ECE3] text-[#2B3C29] font-bold">14 天後</span>
+</div>
+<p class="font-body-md text-[13px] text-[#62675E] leading-relaxed mt-1">預約台北沐羽特寵專科診所，包含嗉囊抹片與糞便寄生蟲常規複檢。</p>
+</div>
+</div>
+<!-- Alert Card 2: Molting Warning -->
+<div class="bg-white rounded-2xl p-4 border border-[#E3DFD5] shadow-sm flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-2xl bg-[#FAF8F4] text-[#8C7B62] border border-[#E3DFD5] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-card-title text-[15px] text-[#232621] font-semibold">夏季換羽週期預警</span>
+<span class="font-label-sm text-[11px] bg-[#FAF8F4] border border-[#E3DFD5] text-[#62675E] px-2 py-0.5 rounded-full font-bold">進行中</span>
+</div>
+<p class="font-body-md text-[13px] text-[#62675E] leading-relaxed mt-1">觀察到頭冠羽管增生，建議日常補充微量生物素水溶營養劑並保持充足睡眠。</p>
+</div>
+</div>
+</section>
+<!-- Interactive Slide-Over / Edit Drawer -->
+<div class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-200 flex flex-col justify-end" id="edit-profile-drawer">
+<!-- Backdrop Overlay -->
+<div class="absolute inset-0 bg-[#162314]/50 backdrop-blur-sm transition-opacity" id="drawer-backdrop"></div>
+<!-- Sheet Content -->
+<div class="relative z-10 w-full bg-[#FAF8F4] rounded-t-3xl shadow-2xl flex flex-col max-h-[82vh] overflow-hidden transform translate-y-full transition-transform duration-300 ease-out border-t border-[#E3DFD5]" id="drawer-panel">
+<!-- Drawer Drag Handle -->
+<div class="w-full flex justify-center pt-3 pb-1">
+<div class="w-10 h-1 bg-[#D7D2C7] rounded-full"></div>
+</div>
+<!-- Drawer Header Bar -->
+<div class="flex items-center justify-between px-margin py-3 border-b border-[#E3DFD5]">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-[#E5ECE3] flex items-center justify-center text-[#384D35]">
+<span class="material-symbols-outlined text-[17px]">pets</span>
+</span>
+<h2 class="font-card-title text-[17px] text-[#232621] font-bold">編輯鳥寶檔案</h2>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full text-[#62675E] bg-white border border-[#E3DFD5] hover:bg-[#FAF8F4] active:scale-95 transition-all shadow-sm" id="close-drawer-icon">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Scrollable Form Container -->
+<form class="overflow-y-auto px-margin py-4 flex flex-col gap-4" id="edit-bird-form">
+<!-- Photo Replacement Pill -->
+<div class="flex items-center gap-3.5 bg-white border border-[#E3DFD5] p-3 rounded-2xl shadow-sm">
+<div class="w-13 h-13 w-12 h-12 rounded-xl overflow-hidden bg-[#FAF8F4] border border-[#E3DFD5] shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up warm profile thumbnail of a yellow cockatiel parrot with clear feather details on studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGg-Xt7W6Hzqo1X2G_TuW1MELa5lOXnh999pWiyKB8Zazh8Mu1mbJQVj52qsdmirYoCc49MuL6DFoSc16s0_w13gEIxvE-4a-Dq9iMggm8rsoR-x2opCSVzq2Exqu-wU8WEPagKog6sDX6Q1DxMG2BDwR36gHDDoXnSUk0QfzV3gLT4jT9q5OAPGd325Izw-myPyGXsM60M-rZ0-_QR7xH6rB2HqxtdIia7OylpxI"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-label-md text-label-md text-[#232621] font-bold">頭像照片</span>
+<span class="font-label-sm text-[11px] text-[#62675E]">建議使用清晰正面照</span>
+</div>
+<button class="h-8 px-3.5 bg-[#EAE5DA] text-[#3F372A] hover:bg-[#ded7c8] rounded-full font-label-sm text-[12px] font-semibold active:scale-95 transition-colors" type="button">更換</button>
+</div>
+<!-- Input: Bird Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-[13px] text-[#232621] font-semibold" for="input-bird-name">鳥寶名稱</label>
+<div class="relative">
+<input class="w-full h-11 bg-white rounded-xl px-3.5 text-body-md text-[#232621] border border-[#E3DFD5] placeholder-[#62675E]/40 focus:outline-none focus:border-[#384D35] focus:ring-1 focus:ring-[#384D35] transition-colors" id="input-bird-name" type="text" value="波波 (Pobo)"/>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 material-symbols-outlined text-[18px] text-[#4E624A]">badge</span>
+</div>
+</div>
+<!-- Select: Species Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-[13px] text-[#232621] font-semibold" for="input-bird-species">品種分類</label>
+<div class="relative">
+<select class="w-full h-11 bg-white rounded-xl px-3.5 pr-10 text-body-md text-[#232621] border border-[#E3DFD5] appearance-none focus:outline-none focus:border-[#384D35] focus:ring-1 focus:ring-[#384D35] transition-colors" id="input-bird-species">
+<option selected="" value="cockatiel">玄鳳鸚鵡 (Cockatiel)</option>
+<option value="monk">和尚鸚鵡 (Monk Parakeet)</option>
+<option value="budgerigar">虎皮鸚鵡 (Budgerigar)</option>
+<option value="lorikeet">虹彩吸蜜鸚鵡 (Rainbow Lorikeet)</option>
+<option value="african-grey">非洲灰鸚鵡 (African Grey)</option>
+<option value="conure">綠頰錐尾太陽鸚鵡 (Green-cheeked Conure)</option>
+</select>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none material-symbols-outlined text-[20px] text-[#4E624A]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Input: Birthday Date Picker -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-[13px] text-[#232621] font-semibold" for="input-bird-birthday">生日 / 出殼日 (年/月/日)</label>
+<div class="relative">
+<input class="w-full h-11 bg-white rounded-xl px-3.5 text-body-md text-[#232621] border border-[#E3DFD5] focus:outline-none focus:border-[#384D35] focus:ring-1 focus:ring-[#384D35] transition-colors" id="input-bird-birthday" type="date" value="2022-04-18"/>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none material-symbols-outlined text-[18px] text-[#4E624A]">calendar_month</span>
+</div>
+</div>
+<!-- Weight & Unit Toggle Row -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-[13px] text-[#232621] font-semibold" for="input-bird-weight">基準體重</label>
+<div class="grid grid-cols-3 gap-2.5 items-center">
+<div class="col-span-2 relative">
+<input class="w-full h-11 bg-white rounded-xl px-3.5 text-[16px] text-[#232621] border border-[#E3DFD5] font-semibold focus:outline-none focus:border-[#384D35] focus:ring-1 focus:ring-[#384D35] transition-colors" id="input-bird-weight" step="0.1" type="number" value="92.0"/>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[14px] text-[#62675E] font-bold">g</span>
+</div>
+<!-- Segmented unit switcher -->
+<div class="h-11 bg-white border border-[#E3DFD5] rounded-xl p-1 flex items-center justify-around">
+<button class="w-1/2 h-full rounded-lg bg-[#384D35] text-white font-label-sm text-[11px] font-bold shadow-sm" type="button">公克</button>
+<button class="w-1/2 h-full rounded-lg text-[#62675E] font-label-sm text-[11px] hover:text-[#232621]" type="button">盎司</button>
+</div>
+</div>
+</div>
+<!-- Professional Identification Codes -->
+<div class="grid grid-cols-2 gap-2.5">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-[13px] text-[#232621] font-semibold" for="input-bird-band">腳環號碼</label>
+<input class="w-full h-11 bg-white border border-[#E3DFD5] rounded-xl px-3 text-body-md text-[#232621] focus:outline-none focus:border-[#384D35]" id="input-bird-band" type="text" value="TW-22-C8902"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-[13px] text-[#232621] font-semibold" for="input-bird-chip">晶片編號</label>
+<input class="w-full h-11 bg-white border border-[#E3DFD5] rounded-xl px-3 text-body-md text-[#232621] focus:outline-none focus:border-[#384D35]" id="input-bird-chip" type="text" value="900115002498"/>
+</div>
+</div>
+<div class="h-1"></div>
+</form>
+<!-- Action Button Group Sticky Footer inside Drawer -->
+<div class="p-margin bg-white border-t border-[#E3DFD5] flex items-center gap-2.5">
+<button class="flex-1 h-12 bg-[#FAF8F4] hover:bg-[#EAE5DA] text-[#232621] font-card-title text-[14px] font-semibold rounded-full border border-[#E3DFD5] active:scale-[0.98] transition-all" id="cancel-edit-btn" type="button">
+          取消
+        </button>
+<button class="flex-[2] h-12 bg-[#384D35] hover:bg-[#2B3C29] text-white font-card-title text-[14px] font-semibold rounded-full shadow-md shadow-[#384D35]/20 active:scale-[0.98] transition-all flex items-center justify-center gap-1.5" id="save-edit-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>儲存變更</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initParrotProfile() {
+    const openBtn = document.getElementById('open-edit-drawer-btn');
+    const closeBtn = document.getElementById('close-drawer-icon');
+    const cancelBtn = document.getElementById('cancel-edit-btn');
+    const saveBtn = document.getElementById('save-edit-btn');
+    const drawer = document.getElementById('edit-profile-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const panel = document.getElementById('drawer-panel');
+
+    function openModal() {
+      drawer.classList.remove('pointer-events-none');
+      drawer.classList.remove('opacity-0');
+      drawer.classList.add('opacity-100');
+      panel.classList.remove('translate-y-full');
+      panel.classList.add('translate-y-0');
+    }
+
+    function closeModal() {
+      panel.classList.remove('translate-y-0');
+      panel.classList.add('translate-y-full');
+      drawer.classList.remove('opacity-100');
+      drawer.classList.add('opacity-0');
+      setTimeout(() => {
+        drawer.classList.add('pointer-events-none');
+      }, 250);
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        saveBtn.innerText = '已儲存！';
+        setTimeout(() => {
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>儲存變更</span>';
+          closeModal();
+        }, 500);
+      });
+    }
+  })();
+</script></main>
+<!-- Bottom Nav with Olive Active Tab -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#F4F1EA]/95 backdrop-blur-xl border-t border-[#E3DFD5] shadow-[0_-4px_20px_rgba(56,77,53,0.06)]"><div class="flex justify-around items-center h-16 px-gutter"><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-[#62675E] hover:text-[#384D35] transition-all group" data-path="home" href="#"><span class="material-symbols-outlined text-[23px] group-hover:scale-105 transition-transform">cottage</span><span class="font-label-sm text-[11px]">首頁</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 transition-all group text-[#384D35] font-bold" data-path="parrot-profile" href="#"><span class="material-symbols-outlined text-[23px] group-hover:scale-105 transition-transform text-[#384D35]">sound_detection_dog_barking</span><span class="font-label-sm text-[11px]">鸚鵡檔案</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-[#62675E] hover:text-[#384D35] transition-all group" data-path="daily-care-log" href="#"><span class="material-symbols-outlined text-[23px] group-hover:scale-105 transition-transform">edit_calendar</span><span class="font-label-sm text-[11px]">照顧紀錄</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-[#62675E] hover:text-[#384D35] transition-all group" data-path="bird-spots" href="#"><span class="material-symbols-outlined text-[23px] group-hover:scale-105 transition-transform">map</span><span class="font-label-sm text-[11px]">鳥聚點</span></a></div></nav></body></html>

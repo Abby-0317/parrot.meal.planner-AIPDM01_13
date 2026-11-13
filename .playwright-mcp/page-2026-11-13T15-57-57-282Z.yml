@@ -1,0 +1,57 @@
+- generic [ref=e2]:
+  - main "先從鳥寶開始" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: 鸚鵡日常
+      - generic "目前頁面" [ref=e6]: 首頁
+    - generic [ref=e8]:
+      - paragraph [ref=e9]: 好好吃飯，好好生活
+      - heading "先從鳥寶開始" [level=1] [ref=e10]
+    - region "先建立鳥寶，才能產生專屬飲食建議" [ref=e11]:
+      - generic [aria-hidden] [ref=e12]: 🦜
+      - heading "先建立鳥寶，才能產生專屬飲食建議" [level=2] [ref=e13]
+      - paragraph [ref=e14]: 填寫基本資料後，我們會把每日照顧資訊整理在這裡。
+      - button "前往鸚鵡檔案" [ref=e15] [cursor=pointer]
+    - region "鳥寶居家小氣候" [ref=e16]:
+      - paragraph [ref=e17]: 今日環境
+      - heading "鳥寶居家小氣候" [level=2] [ref=e18]
+      - generic [ref=e19]:
+        - strong [ref=e20]: 尚無氣溫與濕度資料
+        - text: 目前沒有連接環境資料來源。取得數值後，這裡會顯示今日環境與照護提醒。
+    - region "七日營養菜單" [ref=e21]:
+      - paragraph [ref=e22]: 本週照護安排
+      - heading "七日營養菜單" [level=2] [ref=e23]
+      - generic "從今天起七日" [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 今天
+          - strong [ref=e27]: "13"
+        - generic [ref=e28]:
+          - generic [ref=e29]: 週六
+          - strong [ref=e30]: "14"
+        - generic [ref=e31]:
+          - generic [ref=e32]: 週日
+          - strong [ref=e33]: "15"
+        - generic [ref=e34]:
+          - generic [ref=e35]: 週一
+          - strong [ref=e36]: "16"
+        - generic [ref=e37]:
+          - generic [ref=e38]: 週二
+          - strong [ref=e39]: "17"
+        - generic [ref=e40]:
+          - generic [ref=e41]: 週三
+          - strong [ref=e42]: "18"
+        - generic [ref=e43]:
+          - generic [ref=e44]: 週四
+          - strong [ref=e45]: "19"
+      - generic [ref=e46]:
+        - generic [aria-hidden] [ref=e47]: 🥣
+        - paragraph [ref=e48]: 建立鳥寶後，就能安排專屬菜單。
+    - generic [ref=e49]: 僅供健康日常鮮食參考，病鳥請遵照獸醫指示
+  - navigation "主要導覽" [ref=e50]:
+    - button "首頁" [ref=e51] [cursor=pointer]:
+      - generic [aria-hidden] [ref=e52]: ⌂
+    - button "鸚鵡檔案" [ref=e54] [cursor=pointer]:
+      - generic [aria-hidden] [ref=e55]: 🦜
+    - button "照顧紀錄" [ref=e57] [cursor=pointer]:
+      - generic [aria-hidden] [ref=e58]: ♡
+    - button "鳥聚點" [ref=e60] [cursor=pointer]:
+      - generic [aria-hidden] [ref=e61]: ⌖

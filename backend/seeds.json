@@ -1,0 +1,463 @@
+{
+"food_categories": [
+    {
+      "category_id": "cat_veg_vitA",
+      "name_zh": "深色高維生素 A／β-胡蘿蔔素蔬果",
+      "description": "維護鸚鵡呼吸道黏膜、羽毛光澤與視力健康"
+    },
+    {
+      "category_id": "cat_veg_leafy_ca",
+      "name_zh": "深綠色高鈣葉菜",
+      "description": "補充天然鈣質與維生素 K，預防母鳥卡蛋與軟骨"
+    },
+    {
+      "category_id": "cat_veg_low_cal",
+      "name_zh": "清爽高水份／低熱量蔬菜",
+      "description": "增加啃咬樂趣與膳食纖維，適合體重控制與清冰箱搭配"
+    },
+    {
+      "category_id": "cat_fruit_low_gi",
+      "name_zh": "低升糖／抗氧化水果",
+      "description": "提供天然維生素 C 與花青素，嚴格去籽去核"
+    },
+    {
+      "category_id": "cat_grain_protein",
+      "name_zh": "熟雜糧與植物性蛋白",
+      "description": "提供優質胺基酸與複合碳水化合物，豆類務必完全煮熟"
+    }
+  ],
+  "food_items": [
+    {
+      "food_id": "carrot",
+      "name_zh": "紅蘿蔔",
+      "category": "cat_veg_vitA",
+      "prep_note": "洗淨去皮切丁或刨絲",
+      "grams_per_unit": 4,
+      "unit_label": "小塊",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "pumpkin_steamed",
+      "name_zh": "蒸熟南瓜",
+      "category": "cat_veg_vitA",
+      "prep_note": "蒸熟去籽切小塊（勿加調味）",
+      "grams_per_unit": 5,
+      "unit_label": "小塊",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "sweet_potato_steamed",
+      "name_zh": "蒸熟地瓜",
+      "category": "cat_veg_vitA",
+      "prep_note": "蒸熟去皮切小塊（勿加調味）",
+      "grams_per_unit": 5,
+      "unit_label": "小塊",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "bell_pepper_red",
+      "name_zh": "紅甜椒",
+      "category": "cat_veg_vitA",
+      "prep_note": "徹底去籽與白膜後切小片",
+      "grams_per_unit": 4,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "bell_pepper_yellow",
+      "name_zh": "黃甜椒",
+      "category": "cat_veg_vitA",
+      "prep_note": "徹底去籽後切小片，色澤鮮豔易吸引挑食鳥",
+      "grams_per_unit": 4,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "butternut_squash_steamed",
+      "name_zh": "蒸熟栗子南瓜",
+      "category": "cat_veg_vitA",
+      "prep_note": "蒸熟切小塊，質地綿密適合小型鸚鵡",
+      "grams_per_unit": 5,
+      "unit_label": "小塊",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "purple_sweet_potato_steamed",
+      "name_zh": "蒸熟紫心地瓜",
+      "category": "cat_veg_vitA",
+      "prep_note": "蒸熟切小塊，富含花青素與 β-胡蘿蔔素",
+      "grams_per_unit": 5,
+      "unit_label": "小塊",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "tomato_cherry",
+      "name_zh": "小番茄（去蒂頭）",
+      "category": "cat_veg_vitA",
+      "prep_note": "務必完全去除綠色蒂頭與葉片（含茄鹼），對半切",
+      "grams_per_unit": 6,
+      "unit_label": "半顆",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "chili_pepper_red",
+      "name_zh": "紅辣椒（微辣／甜辣種）",
+      "category": "cat_veg_vitA",
+      "prep_note": "鸚鵡無辣椒素受體，整根洗淨可作啃咬玩具兼補維生素 A",
+      "grams_per_unit": 4,
+      "unit_label": "小段",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "bok_choy",
+      "name_zh": "青江菜",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "徹底洗淨切小段（菜梗與葉片皆可）",
+      "grams_per_unit": 3,
+      "unit_label": "片",
+      "max_weekly_freq": 4
+    },
+    {
+      "food_id": "kale",
+      "name_zh": "羽衣甘藍",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "洗淨去除過硬主梗，撕成適口小片（極佳低草酸高鈣菜）",
+      "grams_per_unit": 3,
+      "unit_label": "片",
+      "max_weekly_freq": 4
+    },
+    {
+      "food_id": "broccoli",
+      "name_zh": "綠花椰菜",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "洗淨切取頂端花蕾小朵（生食或微川燙 30 秒皆可）",
+      "grams_per_unit": 4,
+      "unit_label": "小朵",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "sweet_potato_leaves",
+      "name_zh": "地瓜葉",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "取嫩葉洗淨切碎或微燙去澀",
+      "grams_per_unit": 3,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "pak_choi_white",
+      "name_zh": "小白菜",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "徹底洗淨切小段",
+      "grams_per_unit": 3,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "mustard_greens",
+      "name_zh": "芥菜／刈菜嫩葉",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "洗淨切小片，高鈣低草酸代表葉菜",
+      "grams_per_unit": 3,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "komatsuna",
+      "name_zh": "小松菜（日本油菜）",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "鈣含量極高且低草酸，洗淨切小段即可生食",
+      "grams_per_unit": 3,
+      "unit_label": "片",
+      "max_weekly_freq": 4
+    },
+    {
+      "food_id": "choy_sum",
+      "name_zh": "油菜心",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "洗淨切小段，葉片與嫩莖皆富含鈣質",
+      "grams_per_unit": 3,
+      "unit_label": "小段",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "dandelion_greens",
+      "name_zh": "蒲公英嫩葉（食用級）",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "確保無農藥殘留，洗淨切段，有助肝臟保健與補鈣",
+      "grams_per_unit": 2,
+      "unit_label": "片",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "water_spinach",
+      "name_zh": "空心菜嫩葉",
+      "category": "cat_veg_leafy_ca",
+      "prep_note": "取嫩葉洗淨切碎（含適量草酸，每週限 1–2 次）",
+      "grams_per_unit": 3,
+      "unit_label": "片",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "cucumber",
+      "name_zh": "小黃瓜",
+      "category": "cat_veg_low_cal",
+      "prep_note": "洗淨切薄片或半圓片（高水份，腹瀉期間減量）",
+      "grams_per_unit": 4,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "celery",
+      "name_zh": "西芹",
+      "category": "cat_veg_low_cal",
+      "prep_note": "撕除粗纖維老筋後切小丁，避免纖維纏繞嗉囊",
+      "grams_per_unit": 4,
+      "unit_label": "小塊",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "baby_corn",
+      "name_zh": "玉米筍",
+      "category": "cat_veg_low_cal",
+      "prep_note": "洗淨切圓輪小段（生食或水煮 1 分鐘皆可）",
+      "grams_per_unit": 4,
+      "unit_label": "小段",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "zucchini",
+      "name_zh": "櫛瓜（綠／黃櫛瓜）",
+      "category": "cat_veg_low_cal",
+      "prep_note": "洗淨帶皮切小塊或半圓片，低熱量高纖維",
+      "grams_per_unit": 5,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "green_beans_cooked",
+      "name_zh": "熟四季豆",
+      "category": "cat_veg_low_cal",
+      "prep_note": "務必水煮全熟（生豆含凝集素），切小段",
+      "grams_per_unit": 4,
+      "unit_label": "小段",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "snow_peas",
+      "name_zh": "荷蘭豆／甜豆莢",
+      "category": "cat_veg_low_cal",
+      "prep_note": "去除兩側老絲後川燙 30 秒，切小段",
+      "grams_per_unit": 3,
+      "unit_label": "小段",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "luffa_steamed",
+      "name_zh": "蒸熟絲瓜",
+      "category": "cat_veg_low_cal",
+      "prep_note": "去皮切小塊蒸熟，清爽易消化",
+      "grams_per_unit": 5,
+      "unit_label": "小塊",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "napa_cabbage",
+      "name_zh": "大白菜（取嫩葉）",
+      "category": "cat_veg_low_cal",
+      "prep_note": "洗淨切小片，脆口適合大型或中型鳥啃咬",
+      "grams_per_unit": 4,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "cabbage",
+      "name_zh": "高麗菜（取嫩葉）",
+      "category": "cat_veg_low_cal",
+      "prep_note": "洗淨切適口小片（十字花科每週建議不超過 2 次）",
+      "grams_per_unit": 4,
+      "unit_label": "片",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "asparagus_cooked",
+      "name_zh": "熟蘆筍嫩尖",
+      "category": "cat_veg_low_cal",
+      "prep_note": "水煮熟後切取嫩段小塊",
+      "grams_per_unit": 4,
+      "unit_label": "小段",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "guava",
+      "name_zh": "芭樂",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "建議去籽（避免過硬難消化）切薄片，低糖首選",
+      "grams_per_unit": 5,
+      "unit_label": "片",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "blueberry",
+      "name_zh": "藍莓",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "徹底洗淨，小型鳥對半切、中型鳥可整顆提供",
+      "grams_per_unit": 2,
+      "unit_label": "顆",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "papaya",
+      "name_zh": "木瓜",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "去皮去籽切小方塊（木瓜籽少量可食但建議初版統一去除）",
+      "grams_per_unit": 5,
+      "unit_label": "小塊",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "apple_seedless",
+      "name_zh": "蘋果（嚴格去核）",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "務必徹底挖除果核與蘋果籽（含氰苷），切薄片",
+      "grams_per_unit": 5,
+      "unit_label": "片",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "dragon_fruit_white",
+      "name_zh": "白肉火龍果",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "去皮切小塊（白肉糖分較紅肉低，且不易染髒羽毛）",
+      "grams_per_unit": 5,
+      "unit_label": "小塊",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "strawberry",
+      "name_zh": "草莓",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "徹底清洗農藥殘留，去除綠色蒂頭後切小塊",
+      "grams_per_unit": 4,
+      "unit_label": "小塊",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "kiwi",
+      "name_zh": "奇異果（綠／黃金）",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "去皮切小塊，富含維生素 C 與膳食纖維",
+      "grams_per_unit": 5,
+      "unit_label": "小塊",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "pear_seedless",
+      "name_zh": "水梨（嚴格去核）",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "務必完全去除果核與籽，切薄片（含水量高適量提供）",
+      "grams_per_unit": 5,
+      "unit_label": "片",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "raspberry",
+      "name_zh": "覆盆子／桑葚",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "洗淨瀝乾，低糖高抗氧化漿果",
+      "grams_per_unit": 3,
+      "unit_label": "顆",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "pomegranate",
+      "name_zh": "紅石榴籽",
+      "category": "cat_fruit_low_gi",
+      "prep_note": "剝取紅寶石果粒，極佳覓食玩具與抗氧化來源",
+      "grams_per_unit": 3,
+      "unit_label": "小匙(約10粒)",
+      "max_weekly_freq": 2
+    },
+    {
+      "food_id": "quinoa_cooked",
+      "name_zh": "煮熟藜麥（三色／白藜麥）",
+      "category": "cat_grain_protein",
+      "prep_note": "徹底洗淨皂素後水煮熟透瀝乾（完全蛋白質來源）",
+      "grams_per_unit": 5,
+      "unit_label": "小匙",
+      "max_weekly_freq": 4
+    },
+    {
+      "food_id": "brown_rice_cooked",
+      "name_zh": "煮熟糙米",
+      "category": "cat_grain_protein",
+      "prep_note": "水煮熟透放涼（勿加鹽油）",
+      "grams_per_unit": 5,
+      "unit_label": "小匙",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "chickpeas_cooked",
+      "name_zh": "煮熟鷹嘴豆",
+      "category": "cat_grain_protein",
+      "prep_note": "浸泡後徹底水煮軟爛，小型鳥建議略微壓碎",
+      "grams_per_unit": 4,
+      "unit_label": "顆",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "edamame_cooked",
+      "name_zh": "煮熟毛豆仁（去莢）",
+      "category": "cat_grain_protein",
+      "prep_note": "水煮全熟並剝除豆莢與薄膜，小型鳥對半切",
+      "grams_per_unit": 3,
+      "unit_label": "顆",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "oats_cooked",
+      "name_zh": "煮熟燕麥粒／大燕麥片",
+      "category": "cat_grain_protein",
+      "prep_note": "水煮熟透（勿用即食含糖麥片），低脂高纖",
+      "grams_per_unit": 5,
+      "unit_label": "小匙",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "buckwheat_cooked",
+      "name_zh": "煮熟蕎麥仁",
+      "category": "cat_grain_protein",
+      "prep_note": "洗淨水煮 15 分鐘至軟熟瀝乾，無麩質優質穀物",
+      "grams_per_unit": 5,
+      "unit_label": "小匙",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "lentils_cooked",
+      "name_zh": "煮熟紅扁豆／綠扁豆",
+      "category": "cat_grain_protein",
+      "prep_note": "務必徹底煮熟，顆粒細小非常適合虎皮與太平洋",
+      "grams_per_unit": 5,
+      "unit_label": "小匙",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "barley_cooked",
+      "name_zh": "煮熟大麥仁（洋薏仁）",
+      "category": "cat_grain_protein",
+      "prep_note": "浸泡後煮熟放涼，提供豐富水溶性膳食纖維",
+      "grams_per_unit": 5,
+      "unit_label": "小匙",
+      "max_weekly_freq": 3
+    },
+    {
+      "food_id": "millet_cooked",
+      "name_zh": "煮熟小米",
+      "category": "cat_grain_protein",
+      "prep_note": "水煮熟透成鬆散顆粒狀，適合草地鸚鵡（虎皮、玄鳳）",
+      "grams_per_unit": 5,
+      "unit_label": "小匙",
+      "max_weekly_freq": 3
+    }
+  ]
+}

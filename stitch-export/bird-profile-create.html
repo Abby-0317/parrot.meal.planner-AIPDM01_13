@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>FeatherCare 鳥寶日記 | 有機適性營養與照護建檔</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans & Noto Serif TC -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              forest: '#364831',
+              'forest-hover': '#2a3a26',
+              olive: '#485e42',
+              sage: '#8fa588',
+              cream: '#F7F6F0',
+              card: '#FFFFFF',
+              sand: '#EFECE4',
+              softborder: '#E3E0D5',
+              dark: '#1F291E',
+              subtext: '#687265'
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif TC"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            'soft': '0 8px 24px -4px rgba(54, 72, 49, 0.06)',
+            'float': '0 16px 36px -6px rgba(54, 72, 49, 0.12)'
+          }
+        }
+      }
+    };
+  </script>
+<!-- Custom Core Layout Styles -->
+<style data-purpose="layout-styles">
+    body {
+      background-color: #ECE8DE;
+      color: #1F291E;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="flex justify-center items-start min-h-screen py-0 sm:py-6">
+<!-- BEGIN: MobileDeviceFrame -->
+<main class="w-full max-w-[412px] bg-brand-cream min-h-screen sm:min-h-[880px] sm:rounded-[44px] shadow-2xl overflow-hidden flex flex-col relative sm:border-[8px] sm:border-[#222]">
+<!-- BEGIN: iOSStatusBar -->
+<div class="w-full pt-3 px-7 flex justify-between items-center text-xs font-semibold tracking-tight text-brand-dark/80 select-none z-30" data-purpose="status-bar">
+<span>9:41</span>
+<div class="flex items-center space-x-1.5">
+<!-- Cellular Bars -->
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24">
+<path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 18.25c-.2.2-.2.51 0 .71.2.2.51.2.71 0l.64-.64C7.24 19.34 9.49 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9z" opacity="0.3"></path>
+<path d="M2 17h3v4H2zm6-4h3v8H8zm6-4h3v12h-3zm6-5h3v17h-3z"></path>
+</svg>
+<!-- Wifi -->
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24">
+<path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 3.23c3.81 0 7.27 1.48 9.87 3.92L12 19.04 2.13 11.15C4.73 8.71 8.19 7.23 12 7.23z"></path>
+</svg>
+<!-- Battery Pill -->
+<div class="w-5 h-2.5 rounded-[4px] border border-current flex items-center p-0.5">
+<div class="w-3 h-1.5 bg-current rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- END: iOSStatusBar -->
+<!-- BEGIN: TopNavigationBar -->
+<header class="px-5 pt-3 pb-2 flex items-center justify-between z-20">
+<!-- Back / Home Icon -->
+<button aria-label="返回" class="w-10 h-10 rounded-full bg-white/80 border border-brand-softborder flex items-center justify-center text-brand-forest active:scale-95 transition-transform shadow-sm" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<line x1="19" x2="5" y1="12" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg>
+</button>
+<!-- Brand Logo / Badge -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-sand/70 border border-brand-softborder">
+<!-- Feather Leaf Icon -->
+<svg class="w-4 h-4 text-brand-forest" fill="currentColor" viewbox="0 0 24 24">
+<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="2" x1="16" x2="2" y1="8" y2="22"></line>
+</svg>
+<span class="text-xs font-semibold tracking-wider text-brand-forest font-serif">FeatherCare 鳥寶日記</span>
+</div>
+<!-- Action Context Menu -->
+<button aria-label="更多選項" class="w-10 h-10 rounded-full bg-white/80 border border-brand-softborder flex items-center justify-center text-brand-forest active:scale-95 transition-transform shadow-sm" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="1"></circle>
+<circle cx="19" cy="12" r="1"></circle>
+<circle cx="5" cy="12" r="1"></circle>
+</svg>
+</button>
+</header>
+<!-- END: TopNavigationBar -->
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto custom-scroll px-5 pb-32">
+<!-- BEGIN: HeroBanner -->
+<section class="mt-2 rounded-[30px] bg-brand-forest text-white p-6 relative overflow-hidden shadow-soft" data-purpose="hero-banner">
+<!-- Background Organic Shape Illustration -->
+<div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-white/5 pointer-events-none blur-xl"></div>
+<div class="absolute right-4 top-4 opacity-10">
+<svg class="w-28 h-28 text-white" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"></path>
+</svg>
+</div>
+<!-- Status Tag -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-[11px] font-medium tracking-wide text-brand-cream/90 mb-3">
+<span>🌱</span>
+<span>天然有機適性照護第一步</span>
+</div>
+<h1 class="font-serif text-2xl font-bold leading-snug tracking-tight text-white mt-1">
+          Happy Bird,<br/>Healthy Flight
+        </h1>
+<p class="text-xs text-white/80 mt-2 font-light leading-relaxed max-w-[240px]">
+          為心愛鳥寶量身打造的有機飲食與每日體態監測，守護自在翱翔的每一刻。
+        </p>
+<!-- Micro Bird Avatar pill matching reference design -->
+<div class="mt-5 inline-flex items-center gap-2 bg-[#2a3a26]/70 border border-white/10 rounded-full py-1.5 px-3.5 backdrop-blur-md">
+<span class="text-sm">🦜</span>
+<span class="text-xs font-medium text-brand-cream">玄鳳、小太陽、虎皮等全鳥種適配</span>
+</div>
+</section>
+<!-- END: HeroBanner -->
+<!-- BEGIN: SectionHeader -->
+<div class="mt-6 mb-3 px-1 flex items-center justify-between">
+<div>
+<h2 class="font-serif text-lg font-bold text-brand-dark tracking-tight">建立鳥寶專屬檔案</h2>
+<p class="text-xs text-brand-subtext mt-0.5">填寫基本資料，為羽寶開啟客製膳食與生理監測計畫</p>
+</div>
+<div class="h-8 px-2.5 rounded-full bg-brand-sand/80 flex items-center justify-center text-[11px] font-medium text-brand-forest">
+          已加入 2 隻
+        </div>
+</div>
+<!-- END: SectionHeader -->
+<form class="space-y-4" id="petProfileForm" onsubmit="event.preventDefault();">
+<!-- BEGIN: BirdCard1 -->
+<div class="bg-brand-card rounded-3xl p-5 border border-brand-softborder shadow-soft relative transition-all duration-300" data-purpose="pet-card-primary">
+<!-- Card Header & Badge -->
+<div class="flex items-center justify-between border-b border-brand-sand pb-3.5 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-xl shadow-inner">
+                🐤
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-brand-dark">鳥寶 #1 檔案</span>
+<span class="text-[10px] bg-brand-forest/10 text-brand-forest px-2 py-0.5 rounded-full font-semibold">主要鳥寶</span>
+</div>
+<span class="text-[11px] text-brand-subtext">日常主要配方計算基準</span>
+</div>
+</div>
+<!-- Lock / Status Indicator -->
+<span class="text-xs text-brand-subtext bg-brand-cream px-2 py-1 rounded-lg border border-brand-softborder/60">
+              建檔中
+            </span>
+</div>
+<!-- Input Group: Bird Name -->
+<div class="space-y-1.5 mb-4">
+<label class="block text-xs font-semibold text-brand-dark" for="birdName1">
+              鳥寶名稱 <span class="text-emerald-700">*</span>
+</label>
+<div class="relative">
+<input class="w-full text-sm font-medium bg-brand-cream/40 border border-brand-softborder focus:border-brand-forest focus:ring-1 focus:ring-brand-forest rounded-2xl px-4 py-2.5 text-brand-dark placeholder-brand-subtext/50 outline-none transition" id="birdName1" placeholder="例如：波波、小綠" required="" type="text" value="波波 (Bobo)"/>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-brand-subtext">✨</span>
+</div>
+</div>
+<!-- Input Group: Breed Segmented Select -->
+<div class="space-y-1.5 mb-4">
+<div class="flex justify-between items-center">
+<label class="block text-xs font-semibold text-brand-dark">
+                品種選擇 <span class="text-emerald-700">*</span>
+</label>
+<span class="text-[10px] text-brand-subtext">影響熱量代謝率</span>
+</div>
+<!-- Pill Options -->
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-forest bg-brand-forest text-white shadow-sm transition" type="button">
+                玄鳳鸚鵡
+              </button>
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-softborder bg-brand-cream/50 text-brand-dark hover:bg-brand-sand/60 transition" type="button">
+                和尚鸚鵡
+              </button>
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-softborder bg-brand-cream/50 text-brand-dark hover:bg-brand-sand/60 transition" type="button">
+                虎皮鸚鵡
+              </button>
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-softborder bg-brand-cream/50 text-brand-dark hover:bg-brand-sand/60 transition" type="button">
+                小太陽
+              </button>
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-softborder bg-brand-cream/50 text-brand-dark hover:bg-brand-sand/60 transition" type="button">
+                金太陽
+              </button>
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-softborder bg-brand-cream/50 text-brand-dark hover:bg-brand-sand/60 transition" type="button">
+                其他雀鳥
+              </button>
+</div>
+</div>
+<!-- Input Group: Weight & Gender (2-Col Grid) -->
+<div class="grid grid-cols-2 gap-3 mb-3">
+<!-- Weight Input -->
+<div class="space-y-1.5">
+<label class="block text-xs font-semibold text-brand-dark" for="birdWeight1">
+                目前體重 <span class="text-emerald-700">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full text-sm font-medium bg-brand-cream/40 border border-brand-softborder focus:border-brand-forest focus:ring-1 focus:ring-brand-forest rounded-2xl pl-3.5 pr-8 py-2.5 text-brand-dark outline-none transition" id="birdWeight1" placeholder="90" required="" step="0.5" type="number" value="92"/>
+<span class="absolute right-3 text-xs font-semibold text-brand-subtext pointer-events-none">g</span>
+</div>
+</div>
+<!-- Gender Pill Radios -->
+<div class="space-y-1.5">
+<label class="block text-xs font-semibold text-brand-dark">生理性別</label>
+<div class="flex items-center rounded-2xl border border-brand-softborder bg-brand-cream/40 p-0.5 h-[42px]">
+<button class="flex-1 h-full rounded-xl bg-white text-brand-forest font-semibold text-xs shadow-sm flex items-center justify-center" type="button">
+                  公 ♂
+                </button>
+<button class="flex-1 h-full rounded-xl text-brand-subtext text-xs flex items-center justify-center hover:text-brand-dark" type="button">
+                  母 ♀
+                </button>
+<button class="flex-1 h-full rounded-xl text-brand-subtext text-xs flex items-center justify-center hover:text-brand-dark" title="尚未驗性別" type="button">
+                  DNA ?
+                </button>
+</div>
+</div>
+</div>
+<!-- Health Weight Reference Guide Notice -->
+<div class="bg-brand-cream/80 border border-brand-softborder/80 rounded-2xl p-2.5 flex items-start gap-2">
+<span class="text-sm">⚖️</span>
+<p class="text-[11px] leading-relaxed text-brand-subtext">
+<span class="font-semibold text-brand-forest">玄鳳體重指南：</span> 標準體重大約落在 85g ~ 110g 區間，目前 92g 處於極佳健康範圍！
+            </p>
+</div>
+</div>
+<!-- END: BirdCard1 -->
+<!-- BEGIN: BirdCard2 (Demonstration of Multi-Pet Capability & Remove action) -->
+<div class="bg-brand-card rounded-3xl p-5 border border-brand-softborder shadow-soft relative transition-all duration-300" data-purpose="pet-card-secondary" id="birdProfileCard2">
+<!-- Card Header & Badge with REMOVE Action -->
+<div class="flex items-center justify-between border-b border-brand-sand pb-3.5 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-xl shadow-inner">
+                🦜
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-brand-dark">鳥寶 #2 檔案</span>
+<span class="text-[10px] bg-brand-sand text-brand-subtext px-2 py-0.5 rounded-full font-medium">副鳥寶</span>
+</div>
+<span class="text-[11px] text-brand-subtext">將同步生成獨立食譜</span>
+</div>
+</div>
+<!-- Remove Button -->
+<button class="inline-flex items-center gap-1 text-[11px] font-medium text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200/70 px-2.5 py-1 rounded-full transition active:scale-95" onclick="document.getElementById('birdProfileCard2').classList.add('opacity-0', 'scale-95'); setTimeout(() =&gt; document.getElementById('birdProfileCard2').remove(), 200);" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+<span>移除</span>
+</button>
+</div>
+<!-- Input Group: Bird Name -->
+<div class="space-y-1.5 mb-4">
+<label class="block text-xs font-semibold text-brand-dark" for="birdName2">鳥寶名稱</label>
+<input class="w-full text-sm font-medium bg-brand-cream/40 border border-brand-softborder focus:border-brand-forest focus:ring-1 focus:ring-brand-forest rounded-2xl px-4 py-2.5 text-brand-dark outline-none transition" id="birdName2" placeholder="例如：抹茶" type="text" value="抹茶 (Matcha)"/>
+</div>
+<!-- Input Group: Breed Segmented Select -->
+<div class="space-y-1.5 mb-4">
+<label class="block text-xs font-semibold text-brand-dark">品種選擇</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-softborder bg-brand-cream/50 text-brand-dark hover:bg-brand-sand/60 transition" type="button">
+                玄鳳鸚鵡
+              </button>
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-forest bg-brand-forest text-white shadow-sm transition" type="button">
+                和尚鸚鵡
+              </button>
+<button class="py-2 text-xs font-medium rounded-xl border border-brand-softborder bg-brand-cream/50 text-brand-dark hover:bg-brand-sand/60 transition" type="button">
+                虎皮鸚鵡
+              </button>
+</div>
+</div>
+<!-- Weight & Gender row -->
+<div class="grid grid-cols-2 gap-3 mb-1">
+<div class="space-y-1.5">
+<label class="block text-xs font-semibold text-brand-dark" for="birdWeight2">目前體重</label>
+<div class="relative flex items-center">
+<input class="w-full text-sm font-medium bg-brand-cream/40 border border-brand-softborder focus:border-brand-forest focus:ring-1 focus:ring-brand-forest rounded-2xl pl-3.5 pr-8 py-2.5 text-brand-dark outline-none" id="birdWeight2" type="number" value="110"/>
+<span class="absolute right-3 text-xs font-semibold text-brand-subtext pointer-events-none">g</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block text-xs font-semibold text-brand-dark">生理性別</label>
+<div class="flex items-center rounded-2xl border border-brand-softborder bg-brand-cream/40 p-0.5 h-[42px]">
+<button class="flex-1 h-full rounded-xl text-brand-subtext text-xs flex items-center justify-center hover:text-brand-dark" type="button">
+                  公 ♂
+                </button>
+<button class="flex-1 h-full rounded-xl bg-white text-brand-forest font-semibold text-xs shadow-sm flex items-center justify-center" type="button">
+                  母 ♀
+                </button>
+<button class="flex-1 h-full rounded-xl text-brand-subtext text-xs flex items-center justify-center" type="button">
+                  DNA ?
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- END: BirdCard2 -->
+<!-- BEGIN: AddPetAction -->
+<button class="w-full py-3.5 px-4 rounded-3xl border-2 border-dashed border-brand-olive/30 bg-white/50 hover:bg-white text-brand-forest font-medium text-xs flex items-center justify-center gap-2 transition-all active:scale-[0.99] shadow-sm" id="addBirdBtn" type="button">
+<div class="w-6 h-6 rounded-full bg-brand-sand flex items-center justify-center text-brand-forest font-bold text-sm">＋</div>
+<span>新增另一隻鳥寶 (可多隻共同照護)</span>
+</button>
+<!-- END: AddPetAction -->
+<!-- Trust Badges Row (Pawfect Naturals reference icons) -->
+<div class="pt-3 grid grid-cols-4 gap-2 text-center select-none">
+<div class="flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-brand-sand/80 flex items-center justify-center text-sm mb-1 text-brand-forest">
+              🌾
+            </div>
+<span class="text-[10px] text-brand-subtext">無農藥滋養丸</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-brand-sand/80 flex items-center justify-center text-sm mb-1 text-brand-forest">
+              ⚖️
+            </div>
+<span class="text-[10px] text-brand-subtext">體重曲線預測</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-brand-sand/80 flex items-center justify-center text-sm mb-1 text-brand-forest">
+              🌿
+            </div>
+<span class="text-[10px] text-brand-subtext">草本羽毛養護</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-brand-sand/80 flex items-center justify-center text-sm mb-1 text-brand-forest">
+              🩺
+            </div>
+<span class="text-[10px] text-brand-subtext">特寵獸醫審核</span>
+</div>
+</div>
+</form>
+</div>
+<!-- BEGIN: FixedBottomBar -->
+<div class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-brand-cream via-brand-cream/95 to-transparent backdrop-blur-sm z-30 flex flex-col items-center" data-purpose="floating-submit-container">
+<!-- Primary Submit Pill Button matching "Add to Cart" in Pawfect reference -->
+<button class="w-full h-14 bg-brand-forest hover:bg-brand-forest-hover active:scale-[0.98] text-white rounded-full font-serif font-semibold text-base shadow-float flex items-center justify-center gap-2 transition duration-200" onclick="alert('已成功建立鳥寶檔案！正在調配波波與抹茶的有機適性菜單...');" type="button">
+<span>確認送出並前往菜單推薦</span>
+<svg class="w-4 h-4 text-brand-sand transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</button>
+<!-- Security & Privacy Disclaimer -->
+<p class="text-[10px] text-brand-subtext mt-2 text-center tracking-tight flex items-center gap-1">
+<span>🔒</span> 資料僅用於調配個別化營養菜單與健康提醒，敬請安心填寫
+      </p>
+<!-- iOS Home Indicator -->
+<div class="w-32 h-1 bg-brand-dark/20 rounded-full mt-3"></div>
+</div>
+<!-- END: FixedBottomBar -->
+</main>
+<!-- END: MobileDeviceFrame -->
+</body></html>

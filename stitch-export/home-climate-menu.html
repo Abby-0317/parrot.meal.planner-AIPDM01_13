@@ -1,0 +1,513 @@
+<!DOCTYPE html><html class="light" lang="zh-TW"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#384D35",
+        "primary-dark": "#2D3D2B",
+        "primary-container": "#445941",
+        "on-primary": "#ffffff",
+        "secondary": "#5E6C58",
+        "background": "#F4F1EA",
+        "surface": "#FAF8F4",
+        "surface-container": "#ECE7DD",
+        "surface-container-high": "#E5DFD3",
+        "surface-container-low": "#F8F6F1",
+        "surface-container-lowest": "#ffffff",
+        "on-surface": "#242922",
+        "on-surface-variant": "#626B5F",
+        "outline": "#858E82",
+        "outline-variant": "#DED7CA",
+        "badge-bg": "#EAE4D7",
+        "terracotta": "#B86A48"
+      },
+      borderRadius: {
+        "DEFAULT": "1rem",
+        "lg": "1.5rem",
+        "xl": "2rem",
+        "2xl": "2.5rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-md": "1rem",
+        "gutter": "1rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "1.25rem"
+      },
+      fontFamily: {
+        "sans": ["Plus Jakarta Sans", "sans-serif"],
+        "serif": ["Newsreader", "serif"],
+        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+        "card-title": ["Plus Jakarta Sans", "sans-serif"],
+        "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+        "headline-md": ["Newsreader", "serif"],
+        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+        "headline-lg": ["Newsreader", "serif"]
+      }
+    }
+  }
+};</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+      background-color: #F4F1EA;
+    }
+  </style>
+</head><body class="bg-[#F4F1EA] font-body-md text-[#242922] flex flex-col antialiased selection:bg-[#384D35] selection:text-white"><header class="fixed top-0 w-full z-50 bg-[#F4F1EA]/90 backdrop-blur-xl border-b border-[#DED7CA]/70 pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-[#EAE4D7] border border-[#DED7CA] overflow-hidden flex items-center justify-center p-1 shadow-sm"><img alt="FeatherCare App Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLuqKMouxmLe-VSz5gQZUwxmgh_Rpb8oL68Xx8Yy0usHstlrx0NEEKg05aWpktYgH7mc7nTgyAf366DQNNJBAfy_9amWdDz9GO3fkoH5JKhLcOMU7sC8SQlprRcXaevnKWL_qEOhMdN2wt9RAhNOa89I4SdpB39szsSCXItG6io80W7QsWKXiIjHpSZo4hDp89bKOCQXOf_1G3F00lM9SM_ghkqR5i1jZ2ni65lt0"></div><div class="flex flex-col"><span class="font-bold text-[16px] tracking-tight text-[#2D3D2B] leading-tight">FeatherCare</span><span class="text-[11px] text-[#626B5F] font-medium tracking-wide">鳥寶純淨日誌</span></div></div><div class="flex items-center gap-2 ml-auto"><button aria-label="選單清單" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#2D3D2B] border border-[#DED7CA]/80 shadow-xs hover:bg-[#ECE7DD] active:scale-95 transition-all"><span class="material-symbols-outlined text-[20px]">restaurant_menu</span></button><button aria-label="提醒設定" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#2D3D2B] border border-[#DED7CA]/80 shadow-xs active:scale-95 transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span></button></div></div></header><main class="flex flex-col relative w-full pt-20 pb-28 px-margin bg-[#F4F1EA] min-h-screen"><div class="flex flex-col w-full gap-5">
+<!-- Active Avian Family Quick Selector -->
+<section class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#384D35]"></span>
+<span class="text-[12px] font-semibold text-[#626B5F] uppercase tracking-wider">今日照護鳥寶狀態</span>
+</div>
+<button class="text-[12px] text-[#384D35] font-semibold flex items-center gap-0.5 active:scale-95 transition-transform" onclick="toggleMenuDrawer(true)">
+<span>管理菜單庫</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward_ios</span>
+</button>
+</div>
+<!-- Active Bird Status Bar Cards -->
+<div class="flex gap-3 overflow-x-auto py-1 no-scrollbar">
+<div class="flex items-center gap-3 bg-white p-3 rounded-2xl border border-[#DED7CA]/60 shadow-[0_2px_8px_rgba(45,61,43,0.04)] min-w-[215px] flex-shrink-0">
+<div class="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0 bg-[#ECE7DD] ring-2 ring-[#EAE4D7]">
+<img class="w-full h-full object-cover" data-alt="Charming close-up of a sweet yellow and grey Cockatiel parrot named Bobo with delicate orange cheek spots, looking playfully at camera, soft natural morning sunlight, clean beige background, high-end pet photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt46tuI9gqsR1fm4lI3OuDp2IaVRFN_VmkJs7qGg43Xc2cWZFjgc4KSqWpge-_ly0OluV_erh60U_409aOrCyuvSUwe48vs6TOn5M-R7-2vgVQo0BISY_ml3MyAPFtUU_SvE-iG0QkfAX523zvzAwviofbcfC4MUp333r6IX42g6Ujm8DcloGmittjnUg3QkR-qJXPd5p7lzeJzj7jQ8skH6trc80rMyAB5VXHexE">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#384D35] ring-2 ring-white"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-[15px] text-[#242922] truncate">波波</span>
+<span class="text-[11px] bg-[#EAE4D7] text-[#2D3D2B] font-semibold px-2 py-0.5 rounded-full">玄鳳</span>
+</div>
+<span class="text-[12px] text-[#626B5F] flex items-center gap-1 mt-0.5 font-medium">
+<span class="material-symbols-outlined text-[13px] text-[#384D35]">scale</span> 92.4g <span class="text-[#384D35] font-semibold text-[11px]">(+0.6g)</span>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-white p-3 rounded-2xl border border-[#DED7CA]/60 shadow-[0_2px_8px_rgba(45,61,43,0.04)] min-w-[215px] flex-shrink-0">
+<div class="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0 bg-[#ECE7DD] ring-2 ring-[#EAE4D7]">
+<img class="w-full h-full object-cover" data-alt="Cute green Quaker parrot Monk parakeet named Matcha with gentle emerald plumage and soft grey chest, resting curiously on an indoor wood branch perch, warm ambient light, macro detailing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAasirydTnPSafYtcq73_5ITaa6GsdZCuvmWCc8YV5KLgXtk71e8cOA-rNy2BFQElPzVWKu4XbqZGKFfAXPQvD4guPAr-8Y094kMvfpeNEoFS23nphFrlci6QySLB28yOMLTyLeOBxN5oKPMmNTgtLIuDAhYC1jeV0WADlaK5YaWOLg_Q5YaV3wlFRezlfzz_Ol7CfjQhjF6UPJ85-C6hYdfToG5J-guRFSw-H4yw8">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#5E6C58] ring-2 ring-white"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-[15px] text-[#242922] truncate">抹茶</span>
+<span class="text-[11px] bg-[#EAE4D7] text-[#2D3D2B] font-semibold px-2 py-0.5 rounded-full">綠和尚</span>
+</div>
+<span class="text-[12px] text-[#626B5F] flex items-center gap-1 mt-0.5 font-medium">
+<span class="material-symbols-outlined text-[13px] text-[#384D35]">scale</span> 118.0g <span class="text-[#626B5F] text-[11px]">(持平)</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Weather & Avian Humidity Care Card -->
+<section class="flex flex-col">
+<div class="bg-white rounded-3xl p-5 border border-[#DED7CA]/70 shadow-[0_4px_16px_rgba(45,61,43,0.04)] flex flex-col gap-4">
+<!-- Top Metrics Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-[#F4F1EA] border border-[#DED7CA]/80 flex items-center justify-center text-[#384D35]">
+<span class="material-symbols-outlined text-[28px]">partly_cloudy_day</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-serif text-[32px] text-[#242922] leading-none font-medium">24°C</span>
+<span class="text-[13px] text-[#626B5F] font-medium">室內溫和</span>
+</div>
+<span class="text-[11px] text-[#626B5F] flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[13px] text-[#384D35]">location_on</span> 台北居家舍內・微風良好
+            </span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-center gap-1.5 bg-[#F4F1EA] border border-[#DED7CA]/70 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[15px] text-[#384D35]">humidity_mid</span>
+<span class="text-[13px] text-[#2D3D2B] font-bold">65% RH</span>
+</div>
+<span class="text-[11px] text-[#5E6C58] font-semibold">濕度稍高</span>
+</div>
+</div>
+<!-- Weather Care Prompt (Organic olive subtle card) -->
+<div class="bg-[#F8F6F1] border border-[#DED7CA]/60 p-4 rounded-2xl flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-[#384D35] flex items-center justify-center flex-shrink-0 text-white shadow-xs"><span class="material-symbols-outlined text-[17px]">eco</span></div><div class="flex flex-col gap-1 flex-1"><div class="flex items-center justify-between gap-2"><span class="text-[13px] text-[#242922] font-bold leading-tight">濕度偏高宜通風防潮，午後適量沐浴梳羽</span><span class="text-[11px] bg-[#EAE4D7] text-[#2D3D2B] px-2 py-0.2 rounded-full font-semibold flex-shrink-0">照護建議</span></div></div></div>
+<!-- Quick Environmental Checklist Pills -->
+<div class="grid grid-cols-3 gap-2 pt-0.5">
+<div class="bg-[#F4F1EA] border border-[#DED7CA]/60 p-2.5 rounded-2xl flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[17px] text-[#384D35]">air</span>
+<span class="text-[11px] text-[#626B5F] mt-1">氣流對流</span>
+<span class="text-[13px] text-[#242922] font-bold mt-0.5">良級開窗</span>
+</div>
+<div class="bg-[#F4F1EA] border border-[#DED7CA]/60 p-2.5 rounded-2xl flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[17px] text-[#384D35]">bathtub</span>
+<span class="text-[11px] text-[#626B5F] mt-1">沐浴推薦</span>
+<span class="text-[13px] text-[#242922] font-bold mt-0.5">建議淺浴</span>
+</div>
+<div class="bg-[#F4F1EA] border border-[#DED7CA]/60 p-2.5 rounded-2xl flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[17px] text-[#384D35]">wb_twilight</span>
+<span class="text-[11px] text-[#626B5F] mt-1">自然日照</span>
+<span class="text-[13px] text-[#242922] font-bold mt-0.5">20分鐘適量</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7-Day Avian Diet Menu Section -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#384D35] text-[22px]">calendar_month</span>
+<h2 class="font-serif text-[22px] text-[#242922] font-medium tracking-tight">七日營養菜單</h2>
+</div>
+<div class="flex items-center gap-1">
+<button class="text-[12px] text-[#2D3D2B] bg-[#EAE4D7] hover:bg-[#ded7ca] px-3.5 py-1 rounded-full flex items-center gap-1 active:scale-95 transition-all font-semibold" onclick="toggleMenuDrawer(true)">
+<span class="material-symbols-outlined text-[14px]">format_list_bulleted</span>
+<span>清單檢視</span>
+</button>
+</div>
+</div>
+<!-- 7-Day Horizontal Date Bar -->
+<div class="bg-white p-2 rounded-2xl border border-[#DED7CA]/60 shadow-[0_2px_8px_rgba(45,61,43,0.03)] flex justify-between items-center gap-1">
+<!-- Monday -->
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full text-[#626B5F] hover:bg-[#F4F1EA] transition-colors" onclick="selectDate(this, '週一')">
+<span class="text-[11px] text-[#626B5F]">一</span>
+<span class="text-[14px] mt-0.5 font-semibold text-[#242922]">20</span>
+<span class="w-1 h-1 rounded-full bg-[#384D35] mt-1 opacity-0"></span>
+</button>
+<!-- Tuesday -->
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full text-[#626B5F] hover:bg-[#F4F1EA] transition-colors" onclick="selectDate(this, '週二')">
+<span class="text-[11px] text-[#626B5F]">二</span>
+<span class="text-[14px] mt-0.5 font-semibold text-[#242922]">21</span>
+<span class="w-1 h-1 rounded-full bg-[#384D35] mt-1 opacity-0"></span>
+</button>
+<!-- Wednesday (Today - Highlighted in deep organic green) -->
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full bg-[#384D35] text-white shadow-sm" onclick="selectDate(this, '週三')">
+<span class="text-[10px] uppercase font-semibold text-[#EAE4D7]">今天</span>
+<span class="text-[14px] font-bold mt-0.5 text-white">22</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#EAE4D7] mt-1"></span>
+</button>
+<!-- Thursday -->
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full text-[#626B5F] hover:bg-[#F4F1EA] transition-colors" onclick="selectDate(this, '週四')">
+<span class="text-[11px] text-[#626B5F]">四</span>
+<span class="text-[14px] mt-0.5 font-semibold text-[#242922]">23</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#858E82] mt-1"></span>
+</button>
+<!-- Friday -->
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full text-[#626B5F] hover:bg-[#F4F1EA] transition-colors" onclick="selectDate(this, '週五')">
+<span class="text-[11px] text-[#626B5F]">五</span>
+<span class="text-[14px] mt-0.5 font-semibold text-[#242922]">24</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#858E82] mt-1"></span>
+</button>
+<!-- Saturday -->
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full text-[#626B5F] hover:bg-[#F4F1EA] transition-colors" onclick="selectDate(this, '週六')">
+<span class="text-[11px] text-[#626B5F] font-semibold">六</span>
+<span class="text-[14px] mt-0.5 font-semibold text-[#242922]">25</span>
+<span class="w-1 h-1 rounded-full bg-[#DED7CA] mt-1 opacity-0"></span>
+</button>
+<!-- Sunday -->
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full text-[#626B5F] hover:bg-[#F4F1EA] transition-colors" onclick="selectDate(this, '週日')">
+<span class="text-[11px] text-[#626B5F] font-semibold">日</span>
+<span class="text-[14px] mt-0.5 font-semibold text-[#242922]">26</span>
+<span class="w-1 h-1 rounded-full bg-[#DED7CA] mt-1 opacity-0"></span>
+</button>
+</div>
+<!-- Active Day Diet Breakdown per Parrot -->
+<div class="flex flex-col gap-3.5 mt-0.5">
+<!-- Parrot 1: Cockatiel Bobo (Scheduled Complete) -->
+<div class="bg-white rounded-3xl p-5 border border-[#DED7CA]/60 shadow-[0_4px_16px_rgba(45,61,43,0.03)] flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#B86A48]" title="暖木橙色標"></span>
+<div class="flex items-center gap-2">
+<span class="text-[16px] font-bold text-[#242922]">小黃冠・波波</span>
+<span class="text-[11px] bg-[#F4F1EA] text-[#626B5F] px-2 py-0.5 rounded-full border border-[#DED7CA]/50 font-medium">早午合盤</span>
+</div>
+</div>
+<span class="text-[11px] text-[#2D3D2B] bg-[#EAE4D7] px-2.5 py-0.5 rounded-full font-bold">已盛盤備料</span>
+</div>
+<!-- Ingredient Chips Matrix with icons -->
+<div class="flex flex-wrap gap-2 pt-1">
+<div class="flex items-center gap-1.5 bg-[#F8F6F1] border border-[#DED7CA]/70 px-3 py-1.5 rounded-full">
+<span class="text-sm">🌾</span>
+<span class="text-[13px] text-[#242922] font-medium">天然滋養</span>
+<span class="text-[11px] text-[#626B5F] font-semibold">12g</span>
+</div>
+<div class="flex items-center gap-1.5 bg-[#F8F6F1] border border-[#DED7CA]/70 px-3 py-1.5 rounded-full">
+<span class="text-sm">🌽</span>
+<span class="text-[13px] text-[#242922] font-medium">有機紅栗</span>
+<span class="text-[11px] text-[#626B5F] font-semibold">3g</span>
+</div>
+<div class="flex items-center gap-1.5 bg-[#F8F6F1] border border-[#DED7CA]/70 px-3 py-1.5 rounded-full">
+<span class="text-sm">🍎</span>
+<span class="text-[13px] text-[#242922] font-medium">鮮切蘋果</span>
+<span class="text-[11px] text-[#626B5F] font-semibold">4g</span>
+</div>
+<div class="flex items-center gap-1.5 bg-[#F8F6F1] border border-[#DED7CA]/70 px-3 py-1.5 rounded-full">
+<span class="text-sm">🥬</span>
+<span class="text-[13px] text-[#242922] font-medium">川燙青江</span>
+<span class="text-[11px] text-[#626B5F] font-semibold">2片</span>
+</div>
+<div class="flex items-center gap-1.5 bg-[#F8F6F1] border border-[#DED7CA]/70 px-3 py-1.5 rounded-full">
+<span class="text-sm">🦴</span>
+<span class="text-[13px] text-[#242922] font-medium">墨魚骨粉</span>
+<span class="text-[11px] text-[#384D35] font-bold">微量</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-[12px] text-[#626B5F] pt-2 px-3.5 py-2 rounded-2xl bg-[#F4F1EA] border border-[#DED7CA]/50">
+<span>餵食時間：08:30 / 17:30 兩餐制</span>
+<span class="text-[#2D3D2B] font-semibold">總熱量目標 ~38 kcal</span>
+</div>
+</div>
+<!-- Parrot 2: Quaker Parrot Matcha (Empty State: Not Scheduled Yet) -->
+<div class="bg-white rounded-3xl p-5 border border-[#DED7CA]/60 shadow-[0_4px_16px_rgba(45,61,43,0.03)] flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#384D35]" title="深橄欖綠色標"></span>
+<div class="flex items-center gap-2">
+<span class="text-[16px] font-bold text-[#242922]">綠和尚・抹茶</span>
+<span class="text-[11px] bg-[#F4F1EA] text-[#626B5F] px-2 py-0.5 rounded-full border border-[#DED7CA]/50 font-medium">今日菜單</span>
+</div>
+</div>
+<span class="text-[11px] bg-[#F4F1EA] text-[#626B5F] border border-[#DED7CA]/70 px-2.5 py-0.5 rounded-full font-bold">待填寫</span>
+</div>
+<!-- Refined Organic Empty State with Bowl -->
+<div class="flex flex-col items-center justify-center py-5 px-3 bg-[#F8F6F1] border border-[#DED7CA]/60 rounded-2xl gap-3 text-center">
+<div class="w-14 h-14 rounded-full bg-[#EAE4D7] border border-[#DED7CA] flex items-center justify-center text-[26px] shadow-inner">
+            🥣
+          </div>
+<div class="flex flex-col">
+<span class="text-[14px] text-[#242922] font-bold">尚未安排今日專屬菜單</span>
+<span class="text-[#626B5F] text-[12px] mt-0.5">抹茶的碗空空的，來點低脂滋養丸與胡蘿蔔絲吧！</span>
+</div>
+<div class="flex items-center gap-2.5 mt-1">
+<button class="bg-[#384D35] hover:bg-[#2D3D2B] text-white px-4 py-2 rounded-full text-[13px] flex items-center gap-1.5 active:scale-95 transition-all shadow-sm font-semibold" onclick="quickFillMenu('抹茶')">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>快速套用常規餐</span>
+</button>
+<button class="bg-white hover:bg-[#ECE7DD] text-[#2D3D2B] border border-[#DED7CA] font-semibold px-3.5 py-2 rounded-full text-[13px] active:scale-95 transition-all" onclick="toggleMenuDrawer(true)">
+<span>手動選擇食材</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Nutrition Ratio & Smart Generation Section -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#384D35] text-[22px]">donut_large</span>
+<h2 class="font-serif text-[22px] text-[#242922] font-medium tracking-tight">當日全群營養素平衡</h2>
+</div>
+<span class="text-[12px] text-[#626B5F]">鳥禽獸醫師建議配比</span>
+</div>
+<!-- Nutrition Card Mosaic -->
+<div class="bg-white rounded-3xl p-5 border border-[#DED7CA]/70 shadow-[0_4px_16px_rgba(45,61,43,0.04)] flex flex-col gap-4">
+<!-- Macro Bars -->
+<div class="grid grid-cols-4 gap-2">
+<div class="flex flex-col items-center bg-[#F8F6F1] border border-[#DED7CA]/60 p-2.5 rounded-2xl">
+<span class="text-[11px] text-[#626B5F] font-medium">蛋白質</span>
+<span class="text-[16px] text-[#2D3D2B] font-bold mt-0.5">14%</span>
+<span class="text-[#384D35] text-[10px] font-semibold">適中羽質</span>
+</div>
+<div class="flex flex-col items-center bg-[#F8F6F1] border border-[#DED7CA]/60 p-2.5 rounded-2xl">
+<span class="text-[11px] text-[#626B5F] font-medium">脂肪</span>
+<span class="text-[16px] text-[#2D3D2B] font-bold mt-0.5">5%</span>
+<span class="text-[#5E6C58] text-[10px] font-semibold">護肝低脂</span>
+</div>
+<div class="flex flex-col items-center bg-[#F8F6F1] border border-[#DED7CA]/60 p-2.5 rounded-2xl">
+<span class="text-[11px] text-[#626B5F] font-medium">碳水</span>
+<span class="text-[16px] text-[#2D3D2B] font-bold mt-0.5">62%</span>
+<span class="text-[#384D35] text-[10px] font-semibold">慢釋熱能</span>
+</div>
+<div class="flex flex-col items-center bg-[#F8F6F1] border border-[#DED7CA]/60 p-2.5 rounded-2xl">
+<span class="text-[11px] text-[#626B5F] font-medium">鈣磷比</span>
+<span class="text-[16px] text-[#242922] font-bold mt-0.5">1.5:1</span>
+<span class="text-[#5E6C58] text-[10px] font-semibold">骨骼健全</span>
+</div>
+</div>
+<!-- Linear Visual Spectrum (Deep olive & warm neutrals palette) -->
+<div class="flex flex-col gap-1.5">
+<div class="h-2.5 w-full rounded-full bg-[#ECE7DD] overflow-hidden flex">
+<div class="bg-[#384D35] h-full" style="width: 14%;" title="蛋白質 14%"></div>
+<div class="bg-[#5E6C58] h-full" style="width: 5%;" title="脂肪 5%"></div>
+<div class="bg-[#A48F76] h-full" style="width: 62%;" title="碳水化合物 62%"></div>
+<div class="bg-[#BFC8B8] h-full" style="width: 19%;" title="微量元素與纖維 19%"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-[#626B5F] px-1">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#384D35]"></span>蛋白質</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#5E6C58]"></span>低脂脂肪</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#A48F76]"></span>碳水穀物</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#BFC8B8]"></span>纖維礦物</span>
+</div>
+</div>
+<!-- Smart Generator CTA Banner (Reference styled dark olive card) -->
+<div class="bg-[#384D35] text-white p-4 rounded-2xl flex items-center justify-between gap-3 shadow-md">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-bold truncate text-[14px] text-white">智慧生成本週菜單</span>
+<span class="text-[11px] text-white/80 truncate">根據本季換羽期與氣候自動配比</span>
+</div>
+</div>
+<button class="bg-white hover:bg-[#F4F1EA] text-[#2D3D2B] px-4 py-2 rounded-full text-[13px] font-bold flex-shrink-0 shadow-sm active:scale-95 transition-transform" onclick="triggerSmartPlan()">
+          一鍵生成
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Menu Quick Drawer / Modal Sheet -->
+<div class="fixed inset-0 bg-[#242922]/50 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="menuDrawerBackdrop" onclick="toggleMenuDrawer(false)">
+<!-- Drawer Bottom Sheet Container -->
+<div class="absolute bottom-0 left-0 right-0 max-h-[750px] bg-white rounded-t-[2.5rem] p-6 flex flex-col gap-4 shadow-2xl transform transition-transform duration-300 translate-y-full border-t border-[#DED7CA]/70" id="menuDrawerSheet" onclick="event.stopPropagation()">
+<!-- Drawer Handle & Header -->
+<div class="flex flex-col items-center">
+<div class="w-12 h-1 rounded-full bg-[#DED7CA] mb-3"></div>
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#384D35] text-[24px]">restaurant_menu</span>
+<h3 class="font-serif text-[22px] text-[#242922] font-medium">七日菜單庫與食材倉</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-[#F4F1EA] border border-[#DED7CA] flex items-center justify-center text-[#626B5F] active:scale-90 transition-transform" onclick="toggleMenuDrawer(false)">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Quick Preset Filter Tabs -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-0.5">
+<button class="px-4 py-1.5 rounded-full bg-[#384D35] text-white text-[12px] font-semibold flex-shrink-0 shadow-xs">全部菜單 (7)</button>
+<button class="px-4 py-1.5 rounded-full bg-[#F4F1EA] border border-[#DED7CA] text-[#2D3D2B] text-[12px] font-semibold flex-shrink-0">換羽增羽配方</button>
+<button class="px-4 py-1.5 rounded-full bg-[#F4F1EA] border border-[#DED7CA] text-[#2D3D2B] text-[12px] font-semibold flex-shrink-0">低脂護肝配方</button>
+<button class="px-4 py-1.5 rounded-full bg-[#F4F1EA] border border-[#DED7CA] text-[#2D3D2B] text-[12px] font-semibold flex-shrink-0">幼鳥/調養</button>
+</div>
+<!-- Drawer Content Scroll Area -->
+<div class="flex flex-col gap-3 overflow-y-auto max-h-[420px] pr-1">
+<!-- Preset Item 1 -->
+<div class="p-3.5 bg-[#F8F6F1] border border-[#DED7CA]/70 rounded-2xl flex items-center justify-between hover:bg-[#ECE7DD]/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="text-2xl">🥗</span>
+<div class="flex flex-col">
+<span class="text-[14px] text-[#242922] font-bold">四季基礎維持餐 (滋養丸主體)</span>
+<span class="text-[11px] text-[#626B5F]">無糖滋養丸 70% + 帶殼綜合穀物 20% + 鮮蔬果 10%</span>
+</div>
+</div>
+<button class="bg-white text-[#2D3D2B] border border-[#DED7CA] px-3.5 py-1 rounded-full text-[12px] font-bold shadow-xs active:scale-95">套用</button>
+</div>
+<!-- Preset Item 2 -->
+<div class="p-3.5 bg-[#F8F6F1] border border-[#DED7CA]/70 rounded-2xl flex items-center justify-between hover:bg-[#ECE7DD]/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="text-2xl">🥕</span>
+<div class="flex flex-col">
+<span class="text-[14px] text-[#242922] font-bold">深綠高鈣蔬菜合盤 (週三強化)</span>
+<span class="text-[11px] text-[#626B5F]">羽衣甘藍 + 青花菜碎 + 墨魚骨薄粉</span>
+</div>
+</div>
+<button class="bg-white text-[#2D3D2B] border border-[#DED7CA] px-3.5 py-1 rounded-full text-[12px] font-bold shadow-xs active:scale-95">套用</button>
+</div>
+<!-- Preset Item 3 -->
+<div class="p-3.5 bg-[#F8F6F1] border border-[#DED7CA]/70 rounded-2xl flex items-center justify-between hover:bg-[#ECE7DD]/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="text-2xl">🌾</span>
+<div class="flex flex-col">
+<span class="text-[14px] text-[#242922] font-bold">假日益智覓食盒 (Foraging Pack)</span>
+<span class="text-[11px] text-[#626B5F]">紅栗米穗段 + 燕麥片 + 乾洋甘菊草花</span>
+</div>
+</div>
+<button class="bg-white text-[#2D3D2B] border border-[#DED7CA] px-3.5 py-1 rounded-full text-[12px] font-bold shadow-xs active:scale-95">套用</button>
+</div>
+</div>
+<!-- Action Buttons Footer -->
+<div class="flex gap-2.5 pt-3 border-t border-[#DED7CA]/50">
+<button class="flex-1 bg-[#F4F1EA] hover:bg-[#ECE7DD] text-[#242922] font-bold py-3 rounded-full text-[13px] active:scale-98 transition-all" onclick="toggleMenuDrawer(false)">
+          關閉清單
+        </button>
+<button class="flex-1 bg-[#384D35] hover:bg-[#2D3D2B] text-white py-3 rounded-full text-[13px] flex items-center justify-center gap-1.5 active:scale-98 transition-all shadow-sm font-bold" onclick="triggerNewCustomDiet()">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>新增自訂食譜</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Feedback Component -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 bg-[#2D3D2B] text-white px-5 py-2.5 rounded-full shadow-xl flex items-center gap-2 text-[13px] transition-all duration-300 z-50 opacity-0 pointer-events-none font-semibold border border-white/10" id="dietToast">
+<span class="material-symbols-outlined text-[18px] text-[#EAE4D7]">check_circle</span>
+<span id="toastMessage">切換至 週三 菜單檢視</span>
+</div>
+</div>
+<script>
+  function toggleMenuDrawer(open) {
+    const backdrop = document.getElementById('menuDrawerBackdrop');
+    const sheet = document.getElementById('menuDrawerSheet');
+    if (!backdrop || !sheet) return;
+
+    if (open) {
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      sheet.classList.remove('translate-y-full');
+      sheet.classList.add('translate-y-0');
+    } else {
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      sheet.classList.remove('translate-y-0');
+      sheet.classList.add('translate-y-full');
+    }
+  }
+
+  function selectDate(btn, dayText) {
+    const parent = btn.parentElement;
+    const buttons = parent.querySelectorAll('button');
+    buttons.forEach(b => {
+      b.className = 'flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full text-[#626B5F] hover:bg-[#F4F1EA] transition-colors';
+      const textSpan = b.querySelectorAll('span')[1];
+      if (textSpan) textSpan.className = 'text-[14px] mt-0.5 font-semibold text-[#242922]';
+    });
+    btn.className = 'flex flex-col items-center justify-center py-2 px-1 rounded-xl w-full bg-[#384D35] text-white shadow-sm';
+    const activeDaySpan = btn.querySelectorAll('span')[0];
+    if (activeDaySpan) activeDaySpan.className = 'text-[10px] uppercase font-semibold text-[#EAE4D7]';
+    const activeNumSpan = btn.querySelectorAll('span')[1];
+    if (activeNumSpan) activeNumSpan.className = 'text-[14px] font-bold mt-0.5 text-white';
+    showToast(`切換至 ${dayText} 菜單檢視`);
+  }
+
+  function quickFillMenu(birdName) {
+    showToast(`已為「${birdName}」快速配置今日健康常規餐！🥣✨`);
+  }
+
+  function triggerSmartPlan() {
+    showToast('AI 鳥禽營養師已為本週生成最適比例菜單！🌿');
+  }
+
+  function triggerNewCustomDiet() {
+    toggleMenuDrawer(false);
+    showToast('已開啟自訂食譜食材調配器');
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('dietToast');
+    const text = document.getElementById('toastMessage');
+    if (!toast || !text) return;
+    text.textContent = msg;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2400);
+  }
+
+  // Hook global shell menu button to open drawer if available
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.querySelector('button[aria-label="選單清單"]');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleMenuDrawer(true);
+      });
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#F4F1EA]/95 backdrop-blur-xl border-t border-[#DED7CA]/70 shadow-[0_-4px_20px_rgba(45,61,43,0.05)]"><div class="flex justify-around items-center h-16 px-gutter"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 transition-all group text-[#384D35] font-bold" data-path="home" href="#"><div class="w-8 h-8 rounded-full bg-[#EAE4D7] flex items-center justify-center text-[#384D35] group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[20px]">cottage</span></div><span class="text-[11px] font-semibold text-[#2D3D2B]">首頁</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-[#626B5F] hover:text-[#384D35] transition-all group" data-path="parrot-profile" href="#"><div class="w-8 h-8 rounded-full flex items-center justify-center text-[#626B5F] group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[22px]">sound_detection_dog_barking</span></div><span class="text-[11px] font-medium">鸚鵡檔案</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-[#626B5F] hover:text-[#384D35] transition-all group" data-path="daily-care-log" href="#"><div class="w-8 h-8 rounded-full flex items-center justify-center text-[#626B5F] group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[22px]">edit_calendar</span></div><span class="text-[11px] font-medium">照顧紀錄</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-[#626B5F] hover:text-[#384D35] transition-all group" data-path="bird-spots" href="#"><div class="w-8 h-8 rounded-full flex items-center justify-center text-[#626B5F] group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[22px]">map</span></div><span class="text-[11px] font-medium">鳥聚點</span></a></div></nav>
+
+
+</body></html>
